@@ -6,6 +6,8 @@
 /dist
 
 # misc
+.cache
+.vscode
 .DS_Store
 .env
 npm-debug.log
