@@ -1,8 +1,8 @@
 import styled from "styled-components"
-import { Label, Title } from "../../styles/utilities"
+import { Label, Title, above } from "../../styles/utilities"
 
 export const ShowCardWrapper = styled.section`
-    height: 80%;
+    height: 75%;
     position: relative;
     .show-card {
         position: absolute;
@@ -19,6 +19,10 @@ export const ShowCardWrapper = styled.section`
             &__image {
                 width: 220px;
                 margin-bottom: 10px;
+
+                ${above.md`
+                    width: 300px;
+                `}
             }
 
             &__episodes {

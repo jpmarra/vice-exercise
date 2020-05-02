@@ -20,7 +20,11 @@ const App: React.FC = () => {
                 showIdx={currentShow}
                 direction={direction}
             />
-            <ShowList shows={shows} handleShowSelection={handleShowSelection} />
+            <ShowList
+                shows={shows}
+                handleShowSelection={handleShowSelection}
+                activeIdx={currentShow}
+            />
 
             <GlobalStyles />
         </AppContainer>

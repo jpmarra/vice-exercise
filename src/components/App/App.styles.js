@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { above } from "../../styles/utilities"
 
 export const AppContainer = styled.main`
     height: 100%;
@@ -6,4 +7,8 @@ export const AppContainer = styled.main`
     display: flex;
     flex-direction: column;
     overflow: hidden;
+
+    ${above.md`
+        flex-direction: column-reverse;
+    `}
 `
