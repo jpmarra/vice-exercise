@@ -64,12 +64,4 @@ export const ListImage = styled(motion.img)`
         box-shadow: 0 14px 28px rgba(0, 0, 0, 0.6),
             0 10px 10px rgba(0, 0, 0, 0.6);
     }
-/* 
-    ${(props) =>
-        props.active &&
-        css`
-            border-bottom: 5px solid white;
-            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.6),
-                0 10px 10px rgba(0, 0, 0, 0.6);
-        `} */
 `
