@@ -1,10 +1,29 @@
-import React from "react"
+import React, { useState } from "react"
+import { GlobalStyles } from "../../styles/GlobalStyles"
+import { AppContainer } from "./App.styles"
+import { shows } from "../../shows"
+import ShowCard from "../ShowCard"
+import ShowList from "../ShowList"
 
-const App = () => {
+const App: React.FC = () => {
+    const [[currentShow, direction], setCurrentShow] = useState([0, 0])
+
+    const handleShowSelection = (idx: number): void => {
+        const direction = idx > currentShow ? 1 : 0
+        setCurrentShow([idx, direction])
+    }
+
     return (
-        <div className="App">
-            <h1>Hello World!</h1>
-        </div>
+        <AppContainer>
+            <ShowCard
+                show={shows[currentShow]}
+                showIdx={currentShow}
+                direction={direction}
+            />
+            <ShowList shows={shows} handleShowSelection={handleShowSelection} />
+
+            <GlobalStyles />
+        </AppContainer>
     )
 }
 

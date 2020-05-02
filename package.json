@@ -4,7 +4,7 @@
     "license": "MIT",
     "scripts": {
         "start": "concurrently \"parcel ./public/index.html\" \"tsc --noEmit\" ",
-        "build": "parcel build ./public/index.html",
+        "build": "parcel build ./public/index.html --public-url",
         "test": "jest",
         "test:dev": "jest --watch",
         "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix"
@@ -20,6 +20,7 @@
         ]
     },
     "dependencies": {
+        "framer-motion": "^1.10.3",
         "global": "^4.4.0",
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
@@ -28,6 +29,7 @@
     "devDependencies": {
         "@babel/core": "^7.9.6",
         "@babel/preset-react": "^7.9.4",
+        "@babel/preset-typescript": "^7.9.0",
         "@testing-library/jest-dom": "^5.5.0",
         "@testing-library/react": "^10.0.4",
         "@types/jest": "^25.2.1",
