@@ -4,7 +4,7 @@
     "license": "MIT",
     "scripts": {
         "start": "concurrently \"parcel ./public/index.html\" \"tsc --noEmit\" ",
-        "build": "parcel build ./public/index.html --public-url",
+        "build": "parcel build ./public/index.html",
         "test": "jest",
         "test:dev": "jest --watch",
         "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix"
