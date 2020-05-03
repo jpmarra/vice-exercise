@@ -28,11 +28,9 @@ const _formatData = (shows: RawShow[]): Show[] => {
 export const fetchData = async (): Promise<Show[]> => {
     try {
         const data = await fetch("https://jpmarra.s3.amazonaws.com/shows.json")
-        console.log("~~~HERE IS THE DATA: ", data)
         const response: { shows: RawShow[] } = await data.json()
         return _formatData(response.shows)
     } catch (err) {
-        console.error("~~~~", err)
         return []
     }
 }

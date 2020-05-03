@@ -6,7 +6,7 @@ import { images } from "../../images"
 
 type Props = {
     activeIdx: number
-    handleShowSelection: (idx: number) => void
+    handleShowSelection: (show: Show, idx: number) => void
     shows: Show[]
 }
 
@@ -18,7 +18,7 @@ const ShowList: React.FC<Props> = ({ handleShowSelection, shows, activeIdx }) =>
                     <li
                         key={show.id}
                         className="show-list__item"
-                        onClick={(): void => handleShowSelection(idx)}
+                        onClick={(): void => handleShowSelection(show, idx)}
                     >
                         <div className="slide">
                             <ListImage
