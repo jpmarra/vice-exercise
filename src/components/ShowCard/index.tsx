@@ -1,6 +1,6 @@
 import React from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Show } from "../../shows"
+import { Show } from "../../utils"
 import { ShowCardWrapper } from "./ShowCard.styles"
 import { images } from "../../images"
 
@@ -57,7 +57,7 @@ const ShowCard: React.FC<Props> = ({ show, showIdx, direction }) => {
                     <img
                         className="show__image"
                         alt={`${show.title} show image`}
-                        src={images[show.productImageName]}
+                        src={images[show.imageName]}
                     />
                     <h5 className="show__episodes">{show.episodes} episodes</h5>
                     <h2 className="show__title">{show.title}</h2>

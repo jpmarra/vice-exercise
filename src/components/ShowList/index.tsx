@@ -1,7 +1,7 @@
 import React from "react"
 import { ShowListNav, ListImage } from "./ShowList.styles"
 import { AnimatePresence, motion } from "framer-motion"
-import { Show } from "../../shows"
+import { Show } from "../../utils"
 import { images } from "../../images"
 
 type Props = {
@@ -10,11 +10,7 @@ type Props = {
     shows: Show[]
 }
 
-const ShowList: React.FC<Props> = ({
-    handleShowSelection,
-    shows,
-    activeIdx,
-}) => {
+const ShowList: React.FC<Props> = ({ handleShowSelection, shows, activeIdx }) => {
     return (
         <ShowListNav>
             <ul className="show-list">
@@ -29,7 +25,7 @@ const ShowList: React.FC<Props> = ({
                                 whileHover={{ scale: 1.12 }}
                                 alt={`${show.title} nav item`}
                                 className="show-list__item--image"
-                                src={images[show.productImageName]}
+                                src={images[show.imageName]}
                             />
                             <AnimatePresence>
                                 {idx === activeIdx && (
@@ -44,9 +40,7 @@ const ShowList: React.FC<Props> = ({
                                         exit={{ y: 30, opacity: 0 }}
                                         transition={{ damping: 50 }}
                                     >
-                                        <span className="slide__indicator--number">
-                                            {idx + 1}
-                                        </span>
+                                        <span className="slide__indicator--number">{idx + 1}</span>
                                     </motion.div>
                                 )}
                             </AnimatePresence>
