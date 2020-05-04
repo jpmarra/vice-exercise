@@ -42,7 +42,7 @@ const App: React.FC = () => {
     const handleShowSelection = (show: Show, idx: number): void => {
         const direction = idx > currentShow ? 1 : 0
         setCurrentShow([idx, direction])
-        history.push(`/home?id=${show.id}`, { showIdx: idx })
+        history.push(`/?id=${show.id}`, { showIdx: idx })
     }
 
     return (
