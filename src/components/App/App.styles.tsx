@@ -17,6 +17,6 @@ export const AppContainer = styled.main`
 
     ${above.md`
         flex-direction: column-reverse;
-        min-height: 820px;
+        min-height: 750px;
     `}
 `

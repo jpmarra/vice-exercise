@@ -21,7 +21,7 @@ export const ShowCardWrapper = styled.section`
                 margin-bottom: 10px;
 
                 ${above.md`
-                    width: 300px;
+                    width: 275px;
                 `}
             }
 
