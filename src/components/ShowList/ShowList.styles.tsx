@@ -34,6 +34,8 @@ export const ShowListNav = styled.nav`
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                background: none;
+                border: none;
 
                 &__indicator {
                     width: 20px;

@@ -15,12 +15,11 @@ const ShowList: React.FC<Props> = ({ handleShowSelection, shows, activeIdx }) =>
         <ShowListNav>
             <ul className="show-list">
                 {shows.map((show, idx) => (
-                    <li
-                        key={show.id}
-                        className="show-list__item"
-                        onClick={(): void => handleShowSelection(show, idx)}
-                    >
-                        <div className="slide">
+                    <li key={show.id} className="show-list__item">
+                        <button
+                            className="slide"
+                            onClick={(): void => handleShowSelection(show, idx)}
+                        >
                             <ListImage
                                 whileHover={{ scale: 1.12 }}
                                 alt={`${show.title} nav item`}
@@ -44,7 +43,7 @@ const ShowList: React.FC<Props> = ({ handleShowSelection, shows, activeIdx }) =>
                                     </motion.div>
                                 )}
                             </AnimatePresence>
-                        </div>
+                        </button>
                     </li>
                 ))}
             </ul>

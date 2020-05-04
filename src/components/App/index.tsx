@@ -36,7 +36,7 @@ const App: React.FC = () => {
                 setCurrentShow([showIdx, direction])
             }
         })
-        return () => unlisten()
+        return (): void => unlisten()
     }, [])
 
     const handleShowSelection = (show: Show, idx: number): void => {
@@ -48,7 +48,7 @@ const App: React.FC = () => {
     return (
         <AppContainer>
             {isLoading ? (
-                <div className="loading-display" />
+                <div className="loading-display" data-testid="loading" />
             ) : (
                 <>
                     <ShowCard

@@ -20,5 +20,5 @@ module.exports = {
         "plugin:prettier/recommended",
     ],
 
-    rules: { "react/prop-types": "off" },
+    rules: { "react/prop-types": "off", "@typescript-eslint/no-explicit-any": "off" },
 }
