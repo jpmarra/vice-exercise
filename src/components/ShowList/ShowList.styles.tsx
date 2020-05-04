@@ -45,7 +45,7 @@ export const ShowListNav = styled.nav`
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    margin-top: 15px;
+                    margin-top: 12px;
                     background-color: ${White};
                     color: ${Black};
                     font-size: 12px;
