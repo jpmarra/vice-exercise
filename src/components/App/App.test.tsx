@@ -19,9 +19,16 @@ test("should update the show card when a nav item is clicked", async () => {
     await waitForElementToBeRemoved(screen.getByTestId("loading"))
 
     expect(screen.getByText(/gaycation/i)).toBeInTheDocument()
+    expect(screen.queryByText(/love industries/i)).not.toBeInTheDocument()
 
     fireEvent.click(screen.getByTestId("nav-e6"))
 
     await waitForElementToBeRemoved(screen.getByText(/gaycation/i))
     expect(screen.getByText(/love industries/i)).toBeInTheDocument()
+    expect(screen.queryByText(/king of the road/i)).not.toBeInTheDocument()
+
+    fireEvent.click(screen.getByTestId("nav-c3"))
+
+    await waitForElementToBeRemoved(screen.getByText(/love industries/i))
+    expect(screen.getByText(/king of the road/i)).toBeInTheDocument()
 })
