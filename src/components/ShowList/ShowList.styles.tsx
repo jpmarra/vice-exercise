@@ -34,8 +34,11 @@ export const ShowListNav = styled.nav`
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                background: none;
-                border: none;
+
+                &__button {
+                    background: none;
+                    border: none;
+                }
 
                 &__indicator {
                     width: 20px;
@@ -45,7 +48,7 @@ export const ShowListNav = styled.nav`
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    margin-top: 12px;
+                    margin-top: 15px;
                     background-color: ${White};
                     color: ${Black};
                     font-size: 12px;
@@ -55,7 +58,7 @@ export const ShowListNav = styled.nav`
     }
 `
 
-export const ListImage = styled(motion.img)`
+export const ListImage = styled.img`
     height: 70px;
 
     ${above.sm`

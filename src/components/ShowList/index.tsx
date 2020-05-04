@@ -16,17 +16,19 @@ const ShowList: React.FC<Props> = ({ handleShowSelection, shows, activeIdx }) =>
             <ul className="show-list">
                 {shows.map((show, idx) => (
                     <li key={show.id} className="show-list__item">
-                        <button
-                            className="slide"
-                            onClick={(): void => handleShowSelection(show, idx)}
-                            data-testid={`nav-${show.id}`}
-                        >
-                            <ListImage
+                        <div className="slide">
+                            <motion.button
                                 whileHover={{ scale: 1.12 }}
-                                alt={`${show.title} nav item`}
-                                className="show-list__item--image"
-                                src={images[show.imageName]}
-                            />
+                                className="slide__button"
+                                onClick={(): void => handleShowSelection(show, idx)}
+                                data-testid={`nav-${show.id}`}
+                            >
+                                <ListImage
+                                    alt={`${show.title} nav item`}
+                                    className="show-list__item--image"
+                                    src={images[show.imageName]}
+                                />
+                            </motion.button>
                             <AnimatePresence>
                                 {idx === activeIdx && (
                                     <motion.div
@@ -44,7 +46,7 @@ const ShowList: React.FC<Props> = ({ handleShowSelection, shows, activeIdx }) =>
                                     </motion.div>
                                 )}
                             </AnimatePresence>
-                        </button>
+                        </div>
                     </li>
                 ))}
             </ul>
