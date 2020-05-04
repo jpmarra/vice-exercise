@@ -19,6 +19,7 @@ const ShowList: React.FC<Props> = ({ handleShowSelection, shows, activeIdx }) =>
                         <button
                             className="slide"
                             onClick={(): void => handleShowSelection(show, idx)}
+                            data-testid={`nav-${show.id}`}
                         >
                             <ListImage
                                 whileHover={{ scale: 1.12 }}
