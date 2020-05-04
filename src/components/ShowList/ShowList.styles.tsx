@@ -59,7 +59,7 @@ export const ListImage = styled(motion.img)`
     height: 70px;
 
     ${above.sm`
-        height: 150px;
+        height: 125px;
     `}
 
     &:hover {
