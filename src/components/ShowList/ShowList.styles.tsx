@@ -38,6 +38,11 @@ export const ShowListNav = styled.nav`
                 &__button {
                     background: none;
                     border: none;
+                    padding: 0;
+
+                    &:focus {
+                        outline: 1px solid ${White};
+                    }
                 }
 
                 &__indicator {
